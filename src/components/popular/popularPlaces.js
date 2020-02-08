@@ -14,7 +14,7 @@ const PopularPlaces = (props) => {
 
     const checkCondition = (passedObject, passedSearchTerm) => {
         if (!passedSearchTerm) { return true; }
-        else if (passedSearchTerm && passedSearchTerm.length > 0 && passedObject['title'].toLowerCase().search(passedSearchTerm) > -1) {
+        else if (passedSearchTerm && passedSearchTerm.length > 0 && passedObject['title'].toLowerCase().search(passedSearchTerm.toLowerCase()) > -1) {
             return true;
         }
         return false;
