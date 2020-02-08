@@ -50,27 +50,22 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   let stillMounted = { value: false };
 
-
   useEffect(() => {
-    //console.log('load with:',props);
     stillMounted.value = true;
-    const carouselURL = 'http://demo3136867.mockableasasd.io/carousel';
+    const carouselURL = 'https://demo3136867.mockable.io/carousel';
     const getAPIData = async () => {
-      await axios(carouselURL).then((res) => { /*console.log("res.data:", res.data); */
+      await axios(carouselURL).then((res) => { /* console.log("res.data:", res.data); */
         if (stillMounted.value) {
           setApiData(res.data.data);
         }
       })
         .catch(err => console.log("err:", err))
-        .finally(() => {
-          setApiData(mockData.data);
-        })
+        .finally(() => { /* setApiData(mockData.data);*/  })
     }
     getAPIData();
 
     return () => {
       stillMounted.value = false;
-      /* console.log('out'); */
     };
   }, []);
 
@@ -80,7 +75,6 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Bismillah ir Rehmaan ir Raheem</h1>
       <h1>M Akber Iqbal | MERN developer</h1>
       <input type="text" onChange={(e) => searchingPlaces(e)} placeholder="Search for..." className="searchBox" />
       <div className="appBackground">

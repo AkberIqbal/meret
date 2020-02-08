@@ -7,7 +7,6 @@ const MultiCarousel = (props) => {
 
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5,
         },
@@ -27,10 +26,7 @@ const MultiCarousel = (props) => {
 
     return (
         <>
-{/* 
-        {(props.data && props.data.length > 0) ? <p className='hideMe'> Inside MultiCarousel {props.data.length}</p> : 'empty' }
-    */}
-            <Carousel responsive={responsive}
+           <Carousel responsive={responsive}
                 autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
@@ -44,24 +40,16 @@ const MultiCarousel = (props) => {
                     props.data.map((val, idx) => {
                         return (
                             <div key={idx} data-testid="popular-places">
-                                {/* 
-                                {val.title} - {val.image} - {val.location}
-*/}
                                 <Card  >
-                                    {/* <CardImg top width="100%" src={val.img} alt={val.title} />
-                                    */}
                                     <div className='backgroundImg' style={{ backgroundImage:"url(" + val.img +")" }}></div>
                                     <CardBody>
                                         <CardTitle>{val.title}</CardTitle>
                                         <CardSubtitle> <i className="fa fa-map-marker"></i> {val.location}</CardSubtitle>
                                     </CardBody>
                                 </Card>
-
-
                             </div>
                         )
                     }) : <p>Sorry, we couldn't find any popular places that matched your search criteria </p>
-
                 }
             </Carousel>
         </>

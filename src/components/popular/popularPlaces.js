@@ -32,7 +32,6 @@ const PopularPlaces = (props) => {
 
     return (
         <div className='popularPlaces' >
-            Popular
             {(props.apiData && props.apiData.length > 0) ? <div ><h4>Popular around you </h4> <p className='hideMe'>: {props.searchTerm}</p> </div> : <h4>No data for popular places... please try later</h4>}
             <MultiCarousel data={filteredData(props.apiData, props.searchTerm)} />
             <hr />

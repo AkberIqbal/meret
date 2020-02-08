@@ -54,7 +54,7 @@ const FeaturedPlaces = () => {
         ]
     };
 
-    const featuredURL = "http://demo3136867.mockable.io/featured";
+    const featuredURL = "https://demo3136867.mockable.io/featured";
     const getAPIData = async () => {
         await axios(featuredURL,)
         .then((res) => { 
@@ -63,9 +63,7 @@ const FeaturedPlaces = () => {
             }
         })
             .catch(err => console.log("err:", err))
-            .finally(() => {
-                    setFeaturedItems(mockData.data); 
-            })
+            .finally(() => { /* setFeaturedItems(mockData.data);  */ })
     }
     
     useEffect(() => {
