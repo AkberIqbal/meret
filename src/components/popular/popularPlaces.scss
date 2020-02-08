@@ -1,0 +1,9 @@
+.popularPlaces{ margin: 15px 0px; animation: leftToRight 2s ease-in-out;
+    .backgroundImg{    height: 200px; width: 100%; background-repeat: no-repeat; background-position: center; background-color: #fff;}
+}
+.react-multi-carousel-item {  padding:15px;  }
+@keyframes leftToRight {
+    from {width:0%}
+    to {width:100%; }
+  }
+  .hideMe{visibility: hidden;};

@@ -1,0 +1,29 @@
+.featuredItem{ display:flex; flex-direction: row; flex-flow: wrap; justify-content: center; }
+.featuredItem .card{ margin:0 10px 10px 0; 
+    flex-basis: 18%;
+    flex-grow: 0;
+    animation: slowReveal 3s ease-in-out;
+ }
+.featuredItem .card .backgroundImg{    height: 200px; width: 100%; background-repeat: no-repeat; background-position: center; background-color: #fff; }
+@keyframes slowReveal {
+0% {opacity:0;}
+10% {opacity:0.15; }
+40% {opacity:0.3; }
+60% {opacity:0.45; }
+80% {opacity:0.6; }
+100% {opacity:1; }
+  }
+  
+  @media screen and (max-width:991px){
+   .featuredItem .card{ margin:0 10px 10px 0; 
+       flex-basis: 31%;
+       flex-grow: 0;
+    }
+ }
+
+  @media screen and (max-width:768px){
+    .featuredItem .card{ margin:0 10px 10px 0; 
+        flex-basis: 46%;
+        flex-grow: 0;
+     }
+  }
